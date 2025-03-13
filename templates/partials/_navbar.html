@@ -40,7 +40,7 @@
         <div class="row">
           <div class="col-lg-3 col-md-12 col-sm-12 col-xs-12">
             <!-- logo start -->
-            <div class="logo"> <a href="it_home.html">
+            <div class="logo"> <a href="{% url 'index' %}">
               <img src="{% static 'images/logos/it_logo2.png' %}" alt="logo" /></a> 
             </div>
             <!-- logo end -->
@@ -51,13 +51,13 @@
               <div id="navbar_menu">
                 <ul class="first-ul">
                   <li> <a class="active" href="it_home.html">Home</a>
-                    <ul>
+                    <!-- <ul>
                       <li><a href="it_home.html">It Home Page</a></li>
                       <li><a href="it_home_dark.html">It Dark Home Page</a></li>
-                    </ul>
+                    </ul> -->
                   </li>
-                  <li><a href="it_about.html">About Us</a></li>
-                  <li> <a href="it_service.html">Service</a>
+                  <li><a href="{% url 'about' %}">About Us</a></li>
+                  <li> <a href="{% url 'services' %}">Services</a>
                     <ul>
                       <li><a href="it_service_list.html">Services list</a></li>
                       <li><a href="it_service_detail.html">Services Detail</a></li>
