@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-1x&#+(t*kfqb+3-&jrl$thsvuz_0cqdi$00h8b71tc4#ef==@=
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['locaslhost','topitsolutions.co.nz','192.168.10.250','test.topitsolutions.co.nz']
+ALLOWED_HOSTS = ['localhost','topitsolutions.co.nz','192.168.10.250','test.topitsolutions.co.nz']
 
 
 # Application definition
@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'pages',
     'portfolios',
     'services',
+    'blogs',
 ]
 
 MIDDLEWARE = [

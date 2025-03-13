@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- header -->
+{% include 'partials/_navbar.html' %}
+<!-- end header -->
+
+<!-- inner page banner -->
+<div id="inner_banner" class="section inner_banner_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="title-holder">
+                        <div class="title-holder-cell text-left">
+                            <h1 class="page-title">Our Blog</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="index.html">Home</a></li>
+                                <li class="active">Blog</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end inner page banner -->
+
+<!-- Blog List Section -->
+<div class="section padding_layout_1 blog_list">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12 pull-right">
+                <div class="full">
+                    {% for post in posts %}
+                    <div class="blog_section">
+                        <div class="blog_feature_img">
+                            {% if blog.image %}
+                                <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                            {% else %}
+                                <img src="{% static 'images/it_service/post-03.jpg' %}" alt="{{ blog.title }}">
+                            {% endif %}
+                        </div>
+                        <div class="blog_feature_cantant">
+                            <p class="blog_head">{{ post.title }}</p>
+                            <div class="post_info">
+                                <ul>
+                                    <li><i class="fa fa-user" aria-hidden="true"></i> {{ post.author }}</li>
+                                    <li><i class="fa fa-comment" aria-hidden="true"></i> {{ post.comment_count }}</li>
+                                    <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.published_at|date:"d M Y" }}</li>
+                                </ul>
+                            </div>
+                            <p>{{ post.content|truncatewords:40 }}</p>
+                            <div class="bottom_info">
+                                <div class="pull-left">
+                                    <a class="btn sqaure_bt" href="{% url 'blog_detail' slug=post.slug %}">
+                                        Read More <i class="fa fa-angle-right"></i>
+                                    </a>
+                                </div>
+                                <div class="pull-right">
+                                    <div class="shr">Share: </div>
+                                    <div class="social_icon">
+                                        <ul>
+                                            <li class="fb"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                                            <li class="twi"><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+                                            <li class="gp"><a href="#"><i class="fa fa-google-plus" aria-hidden="true"></i></a></li>
+                                            <li class="pint"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% empty %}
+                    <p>No blog posts available.</p>
+                    {% endfor %}
+                    <div class="center">
+                        <ul class="pagination style_1">
+                            <li><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i></a></li>
+                            <li class="active"><a href="#">1</a></li>
+                            <li><a href="it_blog_grid.html">2</a></li>
+                            <li><a href="#"><i class="fa fa-angle-right" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar -->
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12 pull-left">
+                <div class="side_bar">
+                    <!-- Add the sidebar content here -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end Blog List Section -->
+
+{% include 'partials/_staff.html' %}
+{% include 'partials/_testimonials.html' %}
+{% include 'partials/_partners.html' %}
+{% include 'partials/_footer.html' %}
+
+{% endblock %}
