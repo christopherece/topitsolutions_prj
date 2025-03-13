@@ -1,4 +1,5 @@
 {% load static %}
+
 <div class="section padding_layout_1">
     <div class="container">
         <div class="row">
@@ -12,63 +13,21 @@
             </div>
         </div>
         <div class="row">
-            <!-- Project 1 -->
+            {% for portfolio in portfolios %}
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
                 <div class="project_list">
-                    <div class="project_img"> <img class="img-responsive" src="{% static 'images/project1.jpg' %}" alt="Project 1"> </div>
+                    <div class="project_img"> 
+                        <img class="img-responsive" src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}">
+                    </div>
                     <div class="project_detail_btm">
                         <div class="center">
-                            <h4><a href="project1_detail.html">Project 1 Title</a></h4>
+                            <h4><a href="{{portfolio.link}}" target="_blank">{{ portfolio.title }}</a></h4>
                         </div>
-                        <div class="starratin">
-                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                        </div>
+                        
                     </div>
                 </div>
             </div>
-            <!-- Project 2 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-                <div class="project_list">
-                    <div class="project_img"> <img class="img-responsive" src="{% static 'images/project2.jpg' %}" alt="Project 2"> </div>
-                    <div class="project_detail_btm">
-                        <div class="center">
-                            <h4><a href="project2_detail.html">Project 2 Title</a></h4>
-                        </div>
-                        <div class="starratin">
-                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 3 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-                <div class="project_list">
-                    <div class="project_img"> <img class="img-responsive" src="{% static 'images/project3.jpg' %}" alt="Project 3"> </div>
-                    <div class="project_detail_btm">
-                        <div class="center">
-                            <h4><a href="project3_detail.html">Project 3 Title</a></h4>
-                        </div>
-                        <div class="starratin">
-                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Project 4 -->
-            <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
-                <div class="project_list">
-                    <div class="project_img"> <img class="img-responsive" src="{% static 'images/project4.jpg' %}" alt="Project 4"> </div>
-                    <div class="project_detail_btm">
-                        <div class="center">
-                            <h4><a href="project4_detail.html">Project 4 Title</a></h4>
-                        </div>
-                        <div class="starratin">
-                            <div class="center"> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star" aria-hidden="true"></i> <i class="fa fa-star-o" aria-hidden="true"></i> </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- Add more projects here as needed -->
+            {% endfor %}
         </div>
     </div>
 </div>
