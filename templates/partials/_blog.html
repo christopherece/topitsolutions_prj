@@ -38,7 +38,7 @@
                         </div>
                         
                         <div class="blog_feature_footer">
-                            <a href="{{ blog.get_absolute_url }}" class="btn sqaure_bt">Read More <i class="fa fa-angle-right"></i></a>
+                            <a href="{% url 'blog_detail' slug=blog.slug %}" class="btn sqaure_bt">Read More <i class="fa fa-angle-right"></i></a>
                         </div>
                     </div>
                 </div>
