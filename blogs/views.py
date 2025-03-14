@@ -11,8 +11,8 @@ def blog_list(request):
 
 # View to display a single blog post
 def blog_detail(request, slug):
-    post = get_object_or_404(BlogPost, slug=slug)  # Fetch the blog post by its slug
-    return render(request, 'blogs/blog_detail.html', {'post': post})
+    blog_post = get_object_or_404(BlogPost, slug=slug)  # Fetch the blog post by its slug
+    return render(request, 'blogs/blog_detail.html', {'blog_post': blog_post})
 
 # View to create a new blog post (for admins or authenticated users)
 def blog_create(request):
