@@ -34,7 +34,7 @@
                         </div>
                         
                         <div class="blog_feature_cont">
-                            <p>{{ blog.content|truncatewords:20 }}</p>
+                            <p>{{ blog.content|truncatewords:20 | safe}}</p>
                         </div>
                         
                         <div class="blog_feature_footer">

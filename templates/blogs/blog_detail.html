@@ -52,7 +52,7 @@
                     <li><i class="fa fa-folder" aria-hidden="true"></i> {{ blog_post.get_category_display }}</li>
                   </ul>
                 </div>
-                <p>{{ blog_post.content|linebreaks }}</p>
+                <p>{{ blog_post.content|linebreaks | safe }}</p>
               </div>
             </div>
           </div>

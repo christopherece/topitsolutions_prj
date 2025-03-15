@@ -1,9 +1,11 @@
 from django.db import models
 from django.utils import timezone
+from ckeditor.fields import RichTextField
+
 
 class BlogPost(models.Model):
     title = models.CharField(max_length=200)  # Title of the blog post
-    content = models.TextField()  # Full content of the blog post
+    content = RichTextField(blank=True)  # Full content of the blog post
     author = models.CharField(max_length=100)  # Author of the blog post
     created_at = models.DateTimeField(default=timezone.now)  # Time the blog post was created
     updated_at = models.DateTimeField(auto_now=True)  # Time the blog post was last updated
