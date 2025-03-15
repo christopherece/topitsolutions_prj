@@ -52,7 +52,7 @@
                     <li><i class="fa fa-folder" aria-hidden="true"></i> {{ blog_post.get_category_display }}</li>
                   </ul>
                 </div>
-                <p>{{ blog_post.content|linebreaks | safe }}</p>
+                <p>{{ blog_post.content | safe }}</p>
               </div>
             </div>
           </div>
@@ -70,9 +70,8 @@
                 </div>
               </div>
               <div class="side_bar_blog">
-                <h4>ABOUT AUTHOR</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. sed do eiusmod tempor.</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <h4>{{blog_post.author}}</h4>
+                <p>A dedicated ICT Site Support Specialist with hands-on expertise in full-stack development, I bring a unique blend of technical support skills and web development capabilities to the table.</p>
               </div>
               <!-- <div class="side_bar_blog">
                 <h4>RECENT POST</h4>
