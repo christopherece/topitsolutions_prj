@@ -27,6 +27,8 @@ SECRET_KEY = 'django-insecure-1x&#+(t*kfqb+3-&jrl$thsvuz_0cqdi$00h8b71tc4#ef==@=
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost','topitsolutions.co.nz','192.168.10.250','test.topitsolutions.co.nz']
+CSRF_TRUSTED_ORIGINS = [
+    'https://topitsolutions.co.nz','http://topitsolutions.co.nz']
 
 
 # Application definition
