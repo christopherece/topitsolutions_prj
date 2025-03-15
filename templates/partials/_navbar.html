@@ -8,7 +8,7 @@
             <div class="full">
               <div class="topbar-left">
                 <ul class="list-inline">
-                  <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">Birkdale, Auckland New Zealand 0626</span> </li>
+                  <li> <span class="topbar-label"><i class="fa  fa-home"></i></span> <span class="topbar-hightlight">540 Lorem Ipsum New York, AB 90218</span> </li>
                   <li> <span class="topbar-label"><i class="fa fa-envelope-o"></i></span> <span class="topbar-hightlight"><a href="mailto:info@yourdomain.com">contact@topitsolutions.co.nz</a></span> </li>
                 </ul>
               </div>
@@ -50,29 +50,50 @@
             <div class="menu_side">
               <div id="navbar_menu">
                 <ul class="first-ul">
-                  <li> <a class="active" href="{% url 'index' %}">Home</a>
-                    <!-- <ul>
-                      <li><a href="it_home.html">It Home Page</a></li>
-                      <li><a href="it_home_dark.html">It Dark Home Page</a></li>
-                    </ul> -->
+                  <li> 
+                    {% if '/' == request.path %}
+                    <a class="active" href="{% url 'index' %}">Home</a>
+                    {% else %}
+                    <a class="" href="{% url 'index' %}">Home</a>
+                    {% endif %}
                   </li>
-                  <li><a href="{% url 'about' %}">About Us</a></li>
-                  <li> <a href="{% url 'services' %}">Services</a>
+                  <li>
+                    {% if 'about' in request.path %}
+                    <a class="active" href="{% url 'about' %}">About Us</a>
+                    {% else %}
+                    <a class="" href="{% url 'about' %}">About Us</a>
+                    {% endif %}
+                  </li>
+                  <li>
+                    {% if 'services' in request.path %} 
+                    <a class="active" href="{% url 'services' %}">Services</a>
+                      {% else %}
+                    <a href="{% url 'services' %}">Services</a>
+                    {% endif %}
+                  </li>
+                  <li> 
+                    {% if 'blog' in request.path %}
+                    <a class="active" href="{% url 'blog_list' %}">Blog</a>
+                   {% else %}
+                   <a href="{% url 'blog_list' %}">Blog</a>
+                   {% endif %}
+                  </li>
+                  <!-- <li> <a href="#">Pages</a>
                     <ul>
-                      <li><a href="it_service_list.html">Services list</a></li>
-                      <li><a href="it_service_detail.html">Services Detail</a></li>
+                      <li><a href="it_career.html">Career</a></li>
+                      <li><a href="it_price.html">Pricing</a></li>
+                      <li><a href="it_faq.html">Faq</a></li>
+                      <li><a href="it_privacy_policy.html">Privacy Policy</a></li>
+                      <li><a href="it_error.html">Error 404</a></li>
                     </ul>
-                  </li>
-                  <li> <a href="{% url 'blog_list' %}">Blog</a>
-                    <!-- <ul>
-                      <li><a href="it_blog.html">Blog List</a></li>
-                      <li><a href="it_blog_grid.html">Blog Grid</a></li>
-                      <li><a href="it_blog_detail.html">Blog Detail</a></li>
-                    </ul> -->
-                  </li>
-                 
-                  <li> <a href="{% url 'contact' %}">Contact</a>
-                    
+                  </li> -->
+                  
+                  <li> 
+                    {% if 'contact' in request.path %}
+                    <a class="active" href="{% url 'contact' %}">Contact</a>
+                      {% else %}
+                    <a href="{% url 'contact' %}">Contact</a>
+                      {% endif %}
                   </li>
                 </ul>
               </div>

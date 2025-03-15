@@ -1,4 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from .models import BlogPost
 from django.http import Http404
 from django.utils.text import slugify
@@ -7,7 +8,11 @@ from django.contrib import messages
 # View to list all blog posts
 def blog_list(request):
     posts = BlogPost.objects.all()  # Get all blog posts
-    return render(request, 'blogs/blog_list.html', {'posts': posts})
+    paginator = Paginator(posts, 3)  # Paginate the posts
+    page = request.GET.get('page')  # Get the current page number from the request
+    pages_posts = paginator.get_page(page)  # Get the posts for the current page
+
+    return render(request, 'blogs/blog_list.html', {'posts': pages_posts})
 
 # View to display a single blog post
 def blog_detail(request, slug):

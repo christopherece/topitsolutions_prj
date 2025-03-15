@@ -47,7 +47,7 @@
             <div class="col-md-4">
               <div class="full">
                 <div class="service_blog_inner">
-                  <div class="icon text_align_left"><img src="images/it_service/si1.png" alt="#"></div>
+                  <div class="icon text_align_left"><img src="{% static 'images/it_service/si1.png' %}" alt="#"></div>
                   <h4 class="service-heading">Prompt Response</h4>
                   <p>As a growing business, we pride ourselves on offering quick and responsive services to address your IT and web development needs efficiently.</p>
                 </div>
@@ -56,7 +56,7 @@
             <div class="col-md-4">
               <div class="full">
                 <div class="service_blog_inner">
-                  <div class="icon text_align_left"><img src="images/it_service/si2.png" alt="#"></div>
+                  <div class="icon text_align_left"><img src="{% static 'images/it_service/si2.png' %}" alt="#"></div>
                   <h4 class="service-heading">Secure and Reliable</h4>
                   <p>We ensure that your websites, networks, and data are protected with the latest security solutions, giving you peace of mind.</p>
                 </div>
@@ -65,7 +65,7 @@
             <div class="col-md-4">
               <div class="full">
                 <div class="service_blog_inner">
-                  <div class="icon text_align_left"><img src="images/it_service/si3.png" alt="#"></div>
+                  <div class="icon text_align_left"><img src="{% static 'images/it_service/si3.png' %}" alt="#"></div>
                   <h4 class="service-heading">Dedicated Team</h4>
                   <p>Our small but dedicated team is constantly learning and growing, striving to provide the best solutions and service quality.</p>
                 </div>
@@ -74,7 +74,7 @@
             <div class="col-md-4">
               <div class="full">
                 <div class="service_blog_inner">
-                  <div class="icon text_align_left"><img src="images/it_service/si4.png" alt="#"></div>
+                  <div class="icon text_align_left"><img src="{% static 'images/it_service/si4.png' %}" alt="#"></div>
                   <h4 class="service-heading">Affordable Solutions</h4>
                   <p>We offer budget-friendly services designed to help businesses grow without compromising on quality.</p>
                 </div>
@@ -83,7 +83,7 @@
             <div class="col-md-4">
               <div class="full">
                 <div class="service_blog_inner">
-                  <div class="icon text_align_left"><img src="images/it_service/si5.png" alt="#"></div>
+                  <div class="icon text_align_left"><img src="{% static 'images/it_service/si5.png' %}" alt="#"></div>
                   <h4 class="service-heading">30-Day Guarantee</h4>
                   <p>We stand behind our work with a 30-day satisfaction guarantee, ensuring that our solutions meet your expectations.</p>
                 </div>
@@ -92,7 +92,7 @@
             <div class="col-md-4">
               <div class="full">
                 <div class="service_blog_inner">
-                  <div class="icon text_align_left"><img src="images/it_service/si6.png" alt="#"></div>
+                  <div class="icon text_align_left"><img src="{% static 'images/it_service/si6.png' %}" alt="#"></div>
                   <h4 class="service-heading">Innovative Approach</h4>
                   <p>Our fresh approach to web development and ICT support allows us to provide creative, cutting-edge solutions tailored to your needs.</p>
                 </div>
@@ -112,31 +112,31 @@
       <div class="row">
         <div class="col-md-4 service_blog">
           <div class="full">
-            <div class="service_img"> <img class="img-responsive" src="images/it_service/post-01.jpg" alt="#" /> </div>
+            <div class="service_img"> <img class="img-responsive" src="{% static 'images/it_service/coding.jpg' %}" alt="#" /> </div>
             <div class="service_cont">
               <h3 class="service_head">Web Development</h3>
               <p>We build modern, responsive websites tailored to your business needs, ensuring a seamless user experience.</p>
-              <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">Learn More</a> </div>
+              <div class="bt_cont"> <a class="btn sqaure_bt" href="#">Learn More</a> </div>
             </div>
           </div>
         </div>
         <div class="col-md-4 service_blog">
           <div class="full">
-            <div class="service_img"> <img class="img-responsive" src="images/it_service/post-02.jpg" alt="#" /> </div>
+            <div class="service_img"> <img class="img-responsive" src="{% static 'images/it_service/dark_bg_img2.png' %}" alt="#" /> </div>
             <div class="service_cont">
               <h3 class="service_head">IT Support & Troubleshooting</h3>
               <p>Our expert technicians offer remote and on-site IT support to resolve your technical issues quickly and effectively.</p>
-              <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">Learn More</a> </div>
+              <div class="bt_cont"> <a class="btn sqaure_bt" href="#">Learn More</a> </div>
             </div>
           </div>
         </div>
         <div class="col-md-4 service_blog">
           <div class="full">
-            <div class="service_img"> <img class="img-responsive" src="images/it_service/post-03.jpg" alt="#" /> </div>
+            <div class="service_img"> <img class="img-responsive" src="{% static 'images/it_service/dark_bg_img.png' %}" alt="#" /> </div>
             <div class="service_cont">
               <h3 class="service_head">Network Solutions</h3>
               <p>We provide secure, scalable network solutions, ensuring seamless connectivity for your business operations.</p>
-              <div class="bt_cont"> <a class="btn sqaure_bt" href="it_service_detail.html">Learn More</a> </div>
+              <div class="bt_cont" disabled> <a class="btn sqaure_bt" href="#">Learn More</a> </div>
             </div>
           </div>
         </div>
@@ -145,7 +145,7 @@
   </div>
   <!-- end Services List -->
 
-{% include 'partials/_staff.html' %}
+<!-- {% include 'partials/_staff.html' %} -->
 
 <!-- Testimonials Section -->
 {% include 'partials/_testimonials.html' %}

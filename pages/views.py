@@ -1,15 +1,17 @@
 from django.shortcuts import render, redirect
 from  portfolios.models import Portfolio
 from blogs.models import BlogPost
-from .models import ContactMessage
+from .models import ContactMessage, Testimonial
 # Create your views here.
 def index(request):
     portfolios = Portfolio.objects.all()
     latest_blog_posts = BlogPost.objects.all()[:3]  # This will get the first 3 blog posts
+    testimonials = Testimonial.objects.all()
 
     context = {
         'portfolios': portfolios,
         'latest_blog_posts': latest_blog_posts,
+        'testimonials': testimonials,
     }
     return render(request, 'pages/index.html', context)
 
