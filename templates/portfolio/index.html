@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- header -->
+{% include 'partials/_navbar.html' %}
+<!-- end header -->
+
+<!-- inner page banner -->
+<div id="inner_banner" class="section inner_banner_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="full">
+                    <div class="title-holder">
+                        <div class="title-holder-cell text-left">
+                            <h1 class="page-title">Our Portfolio</h1>
+                            <ol class="breadcrumb">
+                                <li><a href="{% url 'index' %}">Home</a></li>
+                                <li class="active">Portfolio</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- end inner page banner -->
+
+<!-- Blog List Section -->
+{% include 'partials/_portfolio.html' %}
+<!-- end Blog List Section -->
+
+<!-- {% include 'partials/_staff.html' %} -->
+{% include 'partials/_testimonials.html' %}
+{% include 'partials/_partners.html' %}
+{% include 'partials/_footer.html' %}
+
+{% endblock %}

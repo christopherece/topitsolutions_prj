@@ -4,7 +4,7 @@ from blogs.models import BlogPost
 from .models import ContactMessage, Testimonial
 # Create your views here.
 def index(request):
-    portfolios = Portfolio.objects.all()
+    portfolios = Portfolio.objects.all().order_by('-created_at')
     latest_blog_posts = BlogPost.objects.all()[:3]  # This will get the first 3 blog posts
     testimonials = Testimonial.objects.all()
 

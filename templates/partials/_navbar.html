@@ -71,6 +71,16 @@
                     <a href="{% url 'services' %}">Services</a>
                     {% endif %}
                   </li>
+
+
+                  <li>
+                    {% if 'portfolio' in request.path %} 
+                    <a class="active" href="{% url 'portfolio' %}">Portfolio</a>
+                      {% else %}
+                    <a href="{% url 'portfolio' %}">Portfolio</a>
+                    {% endif %}
+                  </li>
+                  
                   <li> 
                     {% if 'blog' in request.path %}
                     <a class="active" href="{% url 'blog_list' %}">Blog</a>

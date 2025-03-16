@@ -7,7 +7,7 @@ from django.contrib import messages
 
 # View to list all blog posts
 def blog_list(request):
-    posts = BlogPost.objects.all()  # Get all blog posts
+    posts = BlogPost.objects.all().order_by('-created_at')  # Get all blog posts
     paginator = Paginator(posts, 3)  # Paginate the posts
     page = request.GET.get('page')  # Get the current page number from the request
     pages_posts = paginator.get_page(page)  # Get the posts for the current page
