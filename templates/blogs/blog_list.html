@@ -52,14 +52,14 @@
                                     <li><i class="fa fa-calendar" aria-hidden="true"></i> {{ post.published_at|date:"d M Y" }}</li>
                                 </ul>
                             </div>
-                            <p>{{ post.content|truncatewords:40 }}</p>
+                            <p>{{ post.content|truncatewords:40 | safe }}</p>
                             <div class="bottom_info">
                                 <div class="pull-left">
                                     <a class="btn sqaure_bt" href="{% url 'blog_detail' slug=post.slug %}">
                                         Read More <i class="fa fa-angle-right"></i>
                                     </a>
                                 </div>
-                                <div class="pull-right">
+                                <!-- <div class="pull-right">
                                     <div class="shr">Share: </div>
                                     <div class="social_icon">
                                         <ul>
@@ -69,7 +69,7 @@
                                             <li class="pint"><a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
                                         </ul>
                                     </div>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
                     </div>
