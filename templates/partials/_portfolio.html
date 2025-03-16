@@ -1,7 +1,6 @@
 {% load static %}
 
 <div class="section padding_layout_1">
-    <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="full">
@@ -12,6 +11,7 @@
                 </div>
             </div>
         </div>
+        <div class="container">
 
         <div class="row">
             <div class="col-lg-7 col-md-7 col-sm-12 about_cont_blog">
@@ -37,7 +37,7 @@
               <div class="full text_align_center"> <img class="img-responsive" src="{% static 'images/it_service/coding.jpg' %}" alt="#" /> </div>
             </div>
           </div>
-<p></p>
+            <p></p>
         <div class="row">
             {% for portfolio in portfolios %}
             <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 margin_bottom_30_all">
@@ -55,5 +55,6 @@
             </div>
             {% endfor %}
         </div>
+    </div>
     </div>
 </div>
