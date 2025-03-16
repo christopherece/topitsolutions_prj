@@ -19,7 +19,7 @@
                         <div class="blog_feature_img">
                             <!-- Display the image of the blog post if it exists, or a default one -->
                             {% if blog.image %}
-                                <img src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                            <img src="{{ blog.image.url }}" alt="{{ blog.title }}" style="width: 100%; height: 250px; object-fit: cover; border-radius: 5px;">
                             {% else %}
                                 <img src="{% static 'images/it_service/post-03.jpg' %}" alt="{{ blog.title }}">
                             {% endif %}
